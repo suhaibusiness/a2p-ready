@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A2P error 30007: Message filtered | A2P Ready</title>
+<meta name="description" content="Twilio error 30007, “Message filtered”, in plain English: what usually causes it, how to fix it, and an example.">
+<link rel="stylesheet" href="../css/app.css">
+<script>try { const t = localStorage.getItem('a2p-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"A2P error 30007: what it means and how to fix it","description":"Twilio error 30007, “Message filtered”, in plain English: what usually causes it, how to fix it, and an example.","about":"Twilio error 30007: Message filtered","dateModified":"2026-11-12","author":{"@type":"Person","name":"Suhaib Akmal"},"isPartOf":{"@type":"WebSite","name":"A2P Ready"},"citation":["https://www.twilio.com/docs/api/errors/30007"],"isAccessibleForFree":true}</script>
+<style>
+  .doc { max-width: 760px; padding-top: 40px; padding-bottom: 56px; }
+  .doc h1 { font-size: clamp(28px, 4vw, 38px); margin-bottom: 12px; }
+  .doc h2 { font-size: 20px; margin-top: 32px; }
+  .doc p, .doc li { color: var(--text); }
+  .doc li { margin-bottom: 6px; }
+  .doc .muted { color: var(--text-2); }
+  .doc .back { display: inline-block; margin-bottom: 24px; }
+  .doc .kicker { color: var(--text-2); font-size: 14px; font-weight: 600; letter-spacing: .02em; margin: 0 0 6px; }
+  .doc blockquote { margin: 16px 0; padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--surface-2); border-radius: 0 8px 8px 0; }
+  .doc blockquote p { margin: 0 0 6px; }
+  .doc blockquote cite { font-style: normal; font-size: 14px; color: var(--text-2); }
+  .doc pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; font: 14px/1.5 var(--mono); }
+  .doc .cta { margin-top: 32px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+  .doc .cta p { margin: 0 0 12px; }
+  .doc .code-list li { margin-bottom: 10px; }
+  .doc footer { margin-top: 40px; font-size: 14px; color: var(--text-2); }
+</style>
+<link rel="canonical" href="https://suhaibusiness.github.io/a2p-ready/codes/30007.html">
+<meta name="theme-color" content="#2b59c3">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A2P Ready">
+<meta property="og:title" content="A2P error 30007: Message filtered | A2P Ready">
+<meta property="og:description" content="Twilio error 30007, “Message filtered”, in plain English: what usually causes it, how to fix it, and an example.">
+<meta property="og:url" content="https://suhaibusiness.github.io/a2p-ready/codes/30007.html">
+<meta property="og:image" content="https://suhaibusiness.github.io/a2p-ready/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A2P Ready: Get a small US business ready for A2P 10DLC texting registration: check your pages, fix what carriers reject, build the missing pieces. Free beta.">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main class="wrap doc">
+  <a class="back" href="../">← A2P Ready: check your pages for free</a>
+  <p class="kicker">Text delivery error</p>
+  <h1>A2P error 30007: what it means and how to fix it</h1>
+  <p>Twilio’s name for it: <b>Message filtered</b>. This page rests on Twilio’s documentation.</p>
+  <blockquote>
+    <p>Twilio: “Your message was filtered (blocked) by Twilio or by the carrier.”</p>
+    <cite><a href="https://www.twilio.com/docs/api/errors/30007" rel="noopener">twilio.com/docs/api/errors/30007</a>, last updated 11 March 2026, checked 12 November 2026</cite>
+  </blockquote>
+
+  <h2>In plain English</h2>
+  <p>The text was sent, but Twilio’s spam filter or the phone carrier stopped it before it reached the customer. It isn’t a registration rejection: it’s judged message by message, on what the text says and how it’s sent.</p>
+
+  <h2>What usually causes it</h2>
+  <ul>
+    <li>Twilio’s filter read the message as spam or unwanted messaging.</li>
+    <li>A wireless carrier flagged the message as objectionable and blocked it.</li>
+    <li>The message or the way you text breaks Twilio’s Messaging Policy or Acceptable Use Policy, or a carrier’s rules.</li>
+  </ul>
+
+  <h2>How to fix it</h2>
+  <ol>
+    <li>Read your message against Twilio’s Messaging Policy and Acceptable Use Policy, and text only people who agreed to hear from you.</li>
+    <li>Make every text say who it’s from and match what people signed up for (the use case you registered).</li>
+    <li>Read Twilio’s help articles on how message filtering works and how to keep messages from being filtered (linked from Twilio’s 30007 page).</li>
+    <li>If you’re sure the texts are compliant, collect 3 or more Message SIDs showing “undelivered” with 30007 and open a ticket with Twilio Support so they can review them.</li>
+  </ol>
+
+  <h2>Example</h2>
+  <p class="muted">A text that says who it’s from and why (change the business name and addresses to yours):</p>
+  <pre><code>Your Business: hi [Name], thanks for your quote request. Your quote for [job] is ready: [link]. Reply STOP to opt out.</code></pre>
+
+  <h2>Codes that often come with it</h2>
+  <ul class="code-list">
+    <li><a href="30034.html">30034: US A2P 10DLC - Message from an Unregistered Number</a></li>
+  </ul>
+
+  <div class="cta">
+    <p><b>Check your own pages for this.</b> A2P Ready reads your website, privacy policy, SMS terms and opt-in form the way a reviewer would, explains what’s missing and builds the missing pages. Free, no account, and nothing you paste leaves your browser.</p>
+    <a class="btn primary" href="../">Open A2P Ready</a>
+  </div>
+
+  <p class="muted">Sources: <a href="https://www.twilio.com/docs/api/errors/30007" rel="noopener">Twilio, error 30007</a> (checked 12 November 2026). Not legal advice. Nobody can promise approval: the carriers decide.</p>
+  <footer><a href="./">All rejection codes</a> · <a href="../">A2P Ready</a> · <a href="../privacy.html">Privacy</a></footer>
+</main>
+</body>
+</html>
